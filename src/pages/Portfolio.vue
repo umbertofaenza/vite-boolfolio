@@ -15,10 +15,12 @@ export default {
 </script>
 
 <template>
-    <h2 class="mb-3">
-        {{ pageTitle }}
-    </h2>
-    <ProjectCard/>
+    <div class="container">
+        <h2 class="mb-3">
+            {{ pageTitle }}
+        </h2>
+    </div>
+
     <!-- <div class="row g-3">
         <ProjectCard v-for="project in this.projects" :project="project"/>
     </div> -->
