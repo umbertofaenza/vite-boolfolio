@@ -30,10 +30,7 @@ export default {
   <div class="container">
     <h1 class="mb-3">Laravel API</h1>
 
-    <h2 class="mb-3">Projects</h2>
-    <div class="row g-3">
-        <ProjectCard v-for="project in this.projects" :project="project"/>
-    </div>
+    <router-view></router-view>
   </div>
 </template>
 
