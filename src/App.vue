@@ -2,6 +2,7 @@
 import axios from 'axios'
 
 import ProjectCard from './components/ProjectCard.vue'
+import Navbar from './ui/Navbar.vue'
 
 export default {
   data() {
@@ -10,7 +11,7 @@ export default {
     }
   },
 
-  components: { ProjectCard },
+  components: { Navbar, ProjectCard },
 
   methods: {
     fetchProjects() {
@@ -27,11 +28,10 @@ export default {
 </script>
 
 <template>
-  <div class="container">
-    <h1 class="mb-3">Laravel API</h1>
+  
+  <Navbar/>
+  <router-view></router-view>
 
-    <router-view></router-view>
-  </div>
 </template>
 
 <style lang="scss">
