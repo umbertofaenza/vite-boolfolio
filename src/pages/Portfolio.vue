@@ -35,7 +35,7 @@ export default {
         </h2>
 
         <div class="row g-3">
-            <ProjectCard v-for="project in this.projects" :project="project"/>
+            <ProjectCard v-for="project in this.projects" :project="project" :isDetail="false"/>
         </div>
     </div>
 
