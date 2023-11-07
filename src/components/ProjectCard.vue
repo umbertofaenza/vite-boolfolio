@@ -11,18 +11,21 @@ export default {
         <div class="card h-100">
             <div class="card-header">
 
-                <div v-if="project.type">
-                    Type: {{ project.type.name }}
-                </div>
-                <div v-else>
-                    Type: No type.
+                <div class="project-type mb-2">
+                    <div v-if="project.type">
+                        <span class="badge text-dark bg-primary-subtle p-2">{{ project.type.name }}</span>
+                    </div>
+                    <div v-else>
+                        <span class="badge text-dark bg-warning-subtle p-2">No type</span>
+                    </div>
                 </div>
 
-                <div v-if="project.technologies">
-                    Technologies: 
-                    <span v-for="technology in project.technologies" class="me-1">
-                        {{ technology.name }}
-                    </span>
+                <div class="project-technologies d-flex">
+                        <span v-for="technology in project.technologies" class="me-1">
+                            <div v-if="technology.name">
+                                <span  class="badge rounded-pill text-dark bg-success-subtle p-2">{{ technology.name }}</span>
+                            </div>
+                        </span>
                 </div>
 
             </div>
