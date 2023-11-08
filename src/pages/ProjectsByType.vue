@@ -1,4 +1,6 @@
 <script>
+import axios from 'axios';
+
 export default {
     data() {
         return{
@@ -6,6 +8,12 @@ export default {
             projects: [],
         }
     },
+
+    created() {
+        axios.get("http://127.0.0.1:8000/api/projects-by-type/" + this.$route.params.type_id).then((response) => {
+        this.projects = response.data.data;
+      })
+    }
 }
 </script>
 
