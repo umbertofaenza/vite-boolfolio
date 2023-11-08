@@ -24,11 +24,12 @@ export default {
                 </div>
                 <!-- project technologies -->
                 <div class="project-technologies d-flex">
-                        <span v-for="technology in project.technologies" class="me-1">
-                            <div v-if="technology.name">
-                                <span  class="badge rounded-pill text-dark bg-success-subtle p-2">{{ technology.name }}</span>
-                            </div>
-                        </span>
+                    <span v-for="technology in project.technologies" class="me-1">
+                        <span class="badge rounded-pill text-dark bg-success-subtle p-2">{{ technology.name }}</span>
+                    </span>
+                    <div v-if="!project.technologies.length" class="me-1">
+                        <span class="badge rounded-pill text-dark bg-warning-subtle p-2">No technologies</span>
+                    </div>
                 </div>
             </div>
             <!-- card body -->
