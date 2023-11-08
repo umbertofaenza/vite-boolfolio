@@ -16,7 +16,7 @@ export default {
                 <!-- project type -->
                 <div class="project-type mb-2">
                     <div v-if="project.type">
-                        <span class="badge text-dark bg-primary-subtle p-2">{{ project.type.name }}</span>
+                        <router-link :to="{name: 'projects-by-type', params: {type_id: project.type_id}}" class="badge text-dark bg-primary-subtle p-2">{{ project.type.name }}</router-link>
                     </div>
                     <div v-else>
                         <span class="badge text-dark bg-warning-subtle p-2">No type</span>
